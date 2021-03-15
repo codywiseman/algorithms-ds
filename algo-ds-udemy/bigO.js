@@ -115,3 +115,19 @@ function logAtMost5(n) {
 
 
 //* Space Complexity - The amount of space taken up by our algorith
+    // auxiliary space complexity - refers to the space required by the alorithm, not inlcuding space taken up by the inputs
+
+//* Space Complexity in JS
+  //! Rules of Thumb
+    // Most primitives (booleans, numbers, undefined, null) are constant space
+    // Strings require O(n) space (where n is the string length)
+    // Reference type are generally O(n), where n is the length (for arrays) or the number of keys (for objects)
+
+//* Logarithms
+    // logariths are the "inverse" of exponents
+    // The logarithm of a number rouhghly measures the number of times you can divide that number by 2 -
+      // before tou get a value thats less than or equal to 1
+    // log_2(8) = 3 -- 2 to what power = 8? 2^3 = 8
+    //* For Big 0, we will omit the 2. i.e log === log_2
+
+    //! Logarithmic time complexity is great! //
