@@ -131,3 +131,15 @@ function logAtMost5(n) {
     //* For Big 0, we will omit the 2. i.e log === log_2
 
     //! Logarithmic time complexity is great! //
+
+//* OBJECTS //
+  //* Object.keys()  O(n)
+  //* Object.values()  O(n)
+  //* Object.entries()  O(n)
+  //* Object.hasOwnProperty()  O(1)
+
+//* ARRAYS //
+  //* Inserting/Removing at the beginning of an array  O(n)
+  //* Inserting/Removing at the end of an array O(1)
+  //* Accessing  O(1)
+  //* Searching  O(n)
