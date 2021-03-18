@@ -127,3 +127,55 @@
 
     // [1, 2, 3, 4, 4, 4, 7, 7, 12, 12, 13]
     // []
+
+  //* Sliding Window Pattern
+
+    //ex:
+      // Write a function called maxSubarraySum which accepts an array of integers
+      // and a number called n. The function should calculate the maximum sum of
+      // of n consecutive elements in the array
+
+    function maxSubarraySum(arr, num) {
+      let maxSum = 0;
+      let tempSum = 0;
+      if(arr.length < num) return null;
+      for(let i = 0; i < num; i++) {
+        maxSum += arr[i];
+      }
+      tempSum= maxSum;
+      for(let i = num; i < arr.length; i++) {
+        tempSum = tempSum - arr[i - num] + arr[i];
+        maxSum = Math.max(maxSum, tempSum);
+      }
+      return maxSum;
+    }
+
+  //* Divide and Conquer Pattern
+
+    //ex:
+      //Given a SORTED array of itegers, write a function called search, that accepts
+      //a value and returns the index where the value passed to the function is located.
+      //If the value is not found, return -1.
+
+      //! This solution involves Binary Search!
+
+    function search(array, val) {
+      let min = 0;
+      let max = array.length - 1;
+
+      while(min <= max) {
+        let middle = Math.floor((min + max) / 2);
+        let currentElement = array[middle];
+
+        if(array[middle] < val) {
+          min = middle - 1;
+        }
+        else if(array[middle] > val) {
+          max = middle - 1;
+        }
+        else {
+          return middle;
+        }
+      }
+      return -1;
+    }
