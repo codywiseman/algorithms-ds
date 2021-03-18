@@ -75,4 +75,55 @@
             return false;
           }
         }
+        return true
       }
+
+    //ex2:
+      // Given two strings, write a function to determine if the second strong is
+      //an anagram of the first.
+
+      function isAnagram(string1, string2) {
+        if(string1.length !== string2.length) {
+          return false;
+        }
+        const counter1 = {};
+        const counter2 ={};
+        for(let val of string1) {
+          counter1[val] = (counter1[val] || 0) + 1;
+        }
+        for(let val of string2) {
+          counter2[val] = (counter2[val] || 0) + 1;
+        }
+        for(let key in counter1) {
+          if (counter2[key] === undefined) {
+            return false;
+          }
+          if(counter1[key] !== counter2[key]) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+  //* Multiple Pointers
+
+    //ex:
+      // Implement a function called countUnique values, which accepts a sorted array
+      //and counts the unique values in the array.
+
+    function countUniqueValues(array) {
+      if(array.length === 0) {
+        return 0;
+      }
+      let i = 0;
+      for(let j = 1; j < array.length; j++) {
+        if(array[i] !== array[j]) {
+          i++;
+          array[i] = array[j];
+        }
+      }
+      return i + 1;
+    }
+
+    // [1, 2, 3, 4, 4, 4, 7, 7, 12, 12, 13]
+    // []
