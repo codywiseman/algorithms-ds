@@ -31,5 +31,17 @@ function sameFrequency(num1, num2) {
 
 
 function areThereDuplicates() {
-
+  let duplicates = false;
+  const values = {};
+  for (let val in arguments) {
+    values[arguments[val]] = (values[arguments[val]] || 0) + 1;
+  }
+  for (let freq in values) {
+    if(values[freq] > 1) {
+      duplicates = true;
+    }
+  }
+  return duplicates;
 }
+
+areThereDuplicates(1, 2, 3, 4, 3, 4, 4)
