@@ -47,3 +47,20 @@ function areThereDuplicates() {
 function areThereDuplicates2() {
   return new Set(arguments).size !== arguments.length;
 }
+
+
+// Write a function called averagePair. Given a sorted array of integers and a target value,
+// determine if there is a pair of values in the array where the average of the pair equals
+// the target average. There may be more than one pair that mathers the average target.
+
+function averagePair(array, target) {
+  let pointOne = 0;
+  let pointTwo = array.length - 1;
+  while(pointOne < pointTwo) {
+    let avg = (array[pointOne] + array[pointTwo]) / 2
+    if(avg === target) return true;
+    else if(avg < target) pointOne++;
+    else pointTwo--;
+  }
+  return false;
+}
