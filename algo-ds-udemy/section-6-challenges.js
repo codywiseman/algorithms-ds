@@ -43,3 +43,7 @@ function areThereDuplicates() {
   }
   return duplicates;
 }
+
+function areThereDuplicates2() {
+  return new Set(arguments).size !== arguments.length;
+}
