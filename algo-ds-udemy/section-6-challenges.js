@@ -43,5 +43,3 @@ function areThereDuplicates() {
   }
   return duplicates;
 }
-
-areThereDuplicates(1, 2, 3, 4, 3, 4, 4)
