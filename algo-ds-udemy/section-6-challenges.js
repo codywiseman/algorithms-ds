@@ -64,3 +64,50 @@ function averagePair(array, target) {
   }
   return false;
 }
+
+// Write a function called isSubsequence which takes in two strings and checks whether the
+// characters in the first string form a subseququnce of the characters in the second string.
+// In other words, the function should check whether the characters in the first string appear
+// somewhere in the second string, without their order changing.
+
+function isSubsequence(str1, str2) {
+  debugger;
+  let str1Point = 0;
+  let str2Point = 0;
+  while (str2Point < str2.length - 1 && str1Point < str1.length - 1) {
+    if(str1[str1Point] !== str2[str2Point]) {
+      str2Point++;
+    }
+    else {
+      str2Point++;
+      str1Point++;
+    }
+  }
+  if(str1Point !== str1.length - 1) {
+    return false;
+  }
+  else {
+    return true;
+  }
+}
+
+// Given an array of integers and a number, write a function called maxSubarrat, which finds the
+// max sum of a subarray with the length of the number passed to the function.
+
+function maxSubarray(array, num) {
+  debugger;
+  if(num > array.length) return null;
+  let temp = 0;
+  let max = 0;
+  for (let i = 0; i < num; i++) {
+    max += array[i];
+  }
+  temp = max;
+  for (let j = num; j < array.length; j++) {
+    temp = temp - array[j - num] + array[j];
+    if(temp > max) {
+      max = temp;
+    }
+  }
+  return max;
+}
