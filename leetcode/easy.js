@@ -39,6 +39,11 @@ var twoSum = function (nums, target) {
   }
 };
 
-// return twoSum([3, 2, 4], 6)
 
-twoSum([3, 2, 4], 6)
+
+// Running sum of 1d Array
+
+const runningSum = nums => {
+  nums.reduce((acc, cv, index, array) => nums[index] += acc)
+  return nums;
+}
