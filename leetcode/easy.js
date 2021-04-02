@@ -54,3 +54,15 @@ const runningSum = nums => {
 const defangIPaddr = address => {
   return address.split('.').join('[.]');
 }
+
+
+//shuffle the array
+
+const shuffle = (nums, n) => {
+  const arr = [];
+  for(let i = 0; i < n; i++) {
+    arr.push(nums[i]);
+    arr.push(nums[i + n]);
+  }
+  return arr;
+}
