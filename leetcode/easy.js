@@ -47,3 +47,10 @@ const runningSum = nums => {
   nums.reduce((acc, cv, index, array) => nums[index] += acc)
   return nums;
 }
+
+
+// Defanging an IP address
+
+const defangIPaddr = address => {
+  return address.split('.').join('[.]');
+}
