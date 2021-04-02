@@ -31,11 +31,12 @@ Constraints:
 
 
 var twoSum = function (nums, target) {
-  const arr = [];
   for (let i = 0; i < nums.length; i++) {
-    arr[0] = nums.indexOf(5)
+    let remains = target - nums[i];
+    if (nums.indexOf(remains) !== -1 && nums.indexOf(remains) !== i) {
+      return [i, nums.indexOf(remains)]
+    }
   }
-  console.log(arr);
 };
 
 // return twoSum([3, 2, 4], 6)
