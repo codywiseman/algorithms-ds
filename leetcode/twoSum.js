@@ -31,7 +31,13 @@ Constraints:
 
 
 var twoSum = function (nums, target) {
-
+  const arr = [];
+  for (let i = 0; i < nums.length; i++) {
+    arr[0] = nums.indexOf(5)
+  }
+  console.log(arr);
 };
 
 // return twoSum([3, 2, 4], 6)
+
+twoSum([3, 2, 4], 6)
